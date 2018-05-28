@@ -1,0 +1,24 @@
+#pattern to number
+pattern=input("pattern?")
+x=0
+t=0
+for i in range(len(pattern)):
+    symbol = pattern[-1:]
+    if symbol=='A':
+        x=x+0
+        t=t+1
+        pattern=pattern[0:-1]
+    if symbol=='C':
+        x=x+1*(4**t)
+        t=t+1
+        pattern=pattern[0:-1]
+    if symbol=='G':
+        x=x+2*(4**t)
+        t=t+1
+        pattern=pattern[0:-1]
+    if symbol=='T':
+        x=x+3*(4**t)
+        t=t+1
+        pattern=pattern[0:-1]
+
+print(x)
